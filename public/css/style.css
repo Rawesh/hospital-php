@@ -1,0 +1,84 @@
+body
+{
+	background-image: url(img/bg.jpg);
+	background-size: cover;
+}
+
+#main
+{
+	display: flex;
+	flex-direction: row;
+}
+
+nav
+{
+	display: flex;
+	width: 20%;
+}
+
+article
+{
+	display: flex;
+	width: 80%;
+}
+
+#createnav
+{
+	display: flex;
+	width: 38%;
+}
+
+#createArticle
+{
+ 	display: flex;
+ 	width: 62%;
+}
+
+table, th, td
+{
+   border: 1px solid black;
+   text-align: center;
+}
+
+table
+{
+	width: 100%;
+	height: 100%;
+}
+
+ th{
+ 	background-color: black;
+ 	text-decoration: underline;
+	font-style: oblique; 	
+ 	color: #FFDEAD;
+ }
+
+ tr:nth-child(even) {
+ 	background-color: #C8A2C8;
+ }
+
+  tr:nth-child(odd) {
+ 	background-color: aliceblue;
+ }
+
+ h1
+ {
+ 	text-align: center;
+ }
+
+ form
+ {	
+ 	background-color: lightgrey;
+ 	border: dashed black 2px;
+ 	width: 300px;
+ 	height: 220px;
+	padding: 5px;
+	text-align: center;
+	font-size: 25px;
+ }
+ input[type=text]
+ {
+ 	height: 20px;
+ 	width: 200px;
+ 	text-align: center;
+ }
