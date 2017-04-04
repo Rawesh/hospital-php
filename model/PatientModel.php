@@ -60,6 +60,20 @@ function deletePatient()
 
 function editPatient()
 {
+	$db = openDatabaseConnection();
+
 	
+	$sql = "UPDATE patients 
+	set `patient_name` = :patient, `species`= :species, `status` = :status; 
+	WHERE id=:id";
+
+	$query = $db->prepare($sql);
+	$query->execute(array(
+  ));
+
+
+	$db = null;
+
+	return true;
 }
 

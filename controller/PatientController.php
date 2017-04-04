@@ -35,11 +35,18 @@ function delete()
 
 function edit()
 {
-	render("patient/edit");
-}
+	var_dump($_GET['id']);
+	/*render("patient/edit");
+*/}
 
 function editSave()
 {
+	if (editPatient() == true) {
+		header("location:". URL . "patient/index");
+		exit();
+	}
+
+		header("location:". URL . "error/index");
 
 }
 
