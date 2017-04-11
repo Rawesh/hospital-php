@@ -1,4 +1,4 @@
-	<h1>AddPatiënt</h1>
+	<h1>Add_Patiënt</h1>
 <div id="main">
 	
 	<nav id="createnav">

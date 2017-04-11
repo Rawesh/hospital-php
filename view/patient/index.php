@@ -1,3 +1,5 @@
+	<h1>Patiënts</h1>
+
 <div id="main">
 	<nav>
 		<ul>
@@ -23,13 +25,19 @@
 			 	<td><?= $patient['species'];?></td>
 				<td><?= $patient['status'];?></td>
 				<td>
-					<a href="<?= URL ?>patient/edit?id=<?=$patient['id']?>">edit</a>
+					<a href="<?= URL ?>patient/edit/<?=$patient['patient_id']?>">Edit</a>
 					/
-					<a href="<?= URL ?>patient/delete?id=<?=$patient['id']?>">delete</a>
+					<a href="<?= URL ?>patient/delete/<?=$patient['patient_id']?>">Delete</a>
+					/
+					<a href="<?= URL ?>patient/read/<?=$patient['patient_id']?>">Info</a>
 				</td>
 			</tr>
 			<?php } ?>
 		</table>		
 	</article>
+
+	<aside>
+
+	</aside>
 </div>
 

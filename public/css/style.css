@@ -19,7 +19,13 @@ nav
 article
 {
 	display: flex;
-	width: 80%;
+	width: 60%;
+}
+
+aside
+{
+	display: flex;
+	width: 20%;
 }
 
 #createnav
@@ -36,7 +42,7 @@ article
 
 table, th, td
 {
-   border: 1px solid black;
+   border: 1px solid orange;
    text-align: center;
 }
 
@@ -82,3 +88,19 @@ table
  	width: 200px;
  	text-align: center;
  }
+
+ a
+ {
+ 	color: red;
+ }
+
+ a:hover
+ {
+ 	color: green;
+ }
+
+ h1
+ {
+ 	text-decoration: underline;
+ }
+

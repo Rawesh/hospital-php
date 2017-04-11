@@ -4,7 +4,7 @@ require(ROOT . "model/PatientModel.php");
 
 function index()
 {
-	render("patient/index", array("patients" => getAllPatiens()));
+	render("patient/index", array("patients" => getAllPatients()));
 }
 
 function create()
@@ -22,9 +22,9 @@ function createSave()
 	header("Location:" . URL . "patient/index");
 }
 
-function delete()
+function delete($id)
 {	
-	if (deletePatient() == true) {
+	if (deletePatient($id) == true) {
 		header("location:". URL . "patient/index");
 		exit();
 	}
@@ -33,14 +33,14 @@ function delete()
 
 }
 
-function edit()
+function edit($id)
 {
-	var_dump($_GET['id']);
-	/*render("patient/edit");
-*/}
+	render("patient/edit", array('patient' => getPatient($id)));
+}
 
 function editSave()
 {
+
 	if (editPatient() == true) {
 		header("location:". URL . "patient/index");
 		exit();
@@ -48,5 +48,10 @@ function editSave()
 
 		header("location:". URL . "error/index");
 
+}
+
+function read($id)
+{
+	render("patient/read", array('patient' => getPatient($id)));
 }
 

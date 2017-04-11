@@ -1,6 +1,6 @@
 <?php
 
-function getAllPatiens() 
+function getAllPatients() 
 {
 	$db = openDatabaseConnection();
 
@@ -9,6 +9,21 @@ function getAllPatiens()
 	$query->execute();
 
 	return $query->fetchAll();
+
+	$db = null;
+
+}
+
+function getPatient($id) 
+{
+	$db = openDatabaseConnection();
+
+	$sql = "SELECT * FROM patients WHERE patient_id = :patient_id";
+	$query = $db->prepare($sql);
+	$query->execute(array(
+		':patient_id' => $id));
+
+	return $query->fetch();
 
 	$db = null;
 
@@ -41,20 +56,18 @@ function createPatient()
 	return true;
 }
 
-function deletePatient()
+function deletePatient($id)
 {
 	$db = openDatabaseConnection();
 
-	$id = $_GET['id'];
-	$sql = "DELETE FROM patients WHERE id=:id";
-
+	$sql = "DELETE FROM patients WHERE patient_id=:patient_id";
+	
 	$query = $db->prepare($sql);
 	$query->execute(array(
-		":id" => $id));
-
-
+		":patient_id" => $id));
+	
 	$db = null;
-
+	
 	return true;
 }
 
@@ -63,14 +76,16 @@ function editPatient()
 	$db = openDatabaseConnection();
 
 	
-	$sql = "UPDATE patients 
-	set `patient_name` = :patient, `species`= :species, `status` = :status; 
-	WHERE id=:id";
+	$sql = "UPDATE patients
+	set `patient_name` = :patient, `species` = :species, `status` = :status 
+	WHERE patient_id=:patient_id";
 
 	$query = $db->prepare($sql);
 	$query->execute(array(
-  ));
-
+		':patient' => $_POST["patient_name"],
+		':species' => $_POST["species"],
+		':status' => $_POST["status"],
+		':patient_id' => $_POST["patient_id"]));
 
 	$db = null;
 
