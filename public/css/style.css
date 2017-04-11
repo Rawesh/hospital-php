@@ -82,6 +82,18 @@ table
 	text-align: center;
 	font-size: 25px;
  }
+
+ #SpecieForm
+ {
+ 	background-color: lightgrey;
+ 	border: dashed black 2px;
+ 	width: 300px;
+ 	height: 90px;
+	padding: 5px;
+	text-align: center;
+	font-size: 25px;
+ }
+
  input[type=text]
  {
  	height: 20px;

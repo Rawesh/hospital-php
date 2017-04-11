@@ -1,6 +1,6 @@
 <?php
 
-require(ROOT . "model/clientModel.php");
+require(ROOT . "model/ClientModel.php");
 
 function index()
 {
