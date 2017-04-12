@@ -4,11 +4,15 @@
 	<nav>
 		<ul>
 			<li>		
-				<a href="<?= URL ?>client/create"><button>addPatient</button></a>
+				<a href="<?= URL ?>client/create">
+					<button id="NavButton">
+						addCliënt
+					</button>
+				</a>
 			</li>
 		</ul>
 	</nav>
-
+<hr>
 	<article>
 		<table>
 
@@ -16,7 +20,7 @@
 				<th>cliënt_Firstname</th>
 				<th>cliënt_Lastname</th>
 				<th>DateOfBirth</th>
-				<th>Options</th>
+				<th colspan="3">Options</th>
 			</tr>
 
 			<?php foreach ($clients as $client) {  ?>
@@ -25,11 +29,27 @@
 			 	<td><?= $client['client_lastname'];?></td>
 				<td><?= $client['client_DateOfBirth'];?></td>
 				<td>
-					<a href="<?= URL ?>client/edit/<?=$client['client_id']?>">Edit</a>
-					/
-					<a href="<?= URL ?>client/delete/<?=$client['client_id']?>">Delete</a>
-					/
-					<a href="<?= URL ?>client/read/<?=$client['client_id']?>">Info</a>
+					<a href="<?= URL ?>client/edit/<?=$client['client_id']?>">
+						<button>
+							Edit
+						</button>
+					</a>
+				</td>
+
+				<td>
+					<a href="<?= URL ?>client/delete/<?=$client['client_id']?>">
+						<button>
+							Delete
+						</button>
+					</a>
+				</td>
+
+				<td>
+					<a href="<?= URL ?>client/read/<?=$client['client_id']?>">
+						<button>
+							Info
+						</button>
+					</a>
 				</td>
 			</tr>
 			<?php } ?>
@@ -37,6 +57,22 @@
 	</article>
 
 	<aside>
-
+		<ul>
+			<li>
+				<a href="<?= URL ?>patient/index">
+					<button id="BigButton">
+						Patiënt
+					</button>
+				</a>
+			</li>
+			
+			<li>
+				<a href="<?= URL ?>specie/index">
+					<button id="BigButton">
+						Specie
+					</button>
+				</a>
+			</li>
+		</ul>
 	</aside>
 </div>

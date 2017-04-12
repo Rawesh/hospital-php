@@ -4,11 +4,15 @@
 	<nav>
 		<ul>
 			<li>		
-				<a href="<?= URL ?>patient/create"><button>addPatient</button></a>
+				<a href="<?= URL ?>patient/create">
+					<button id="NavButton">
+						addPatient
+					</button>
+				</a>
 			</li>
 		</ul>
 	</nav>
-
+<hr>
 	<article>
 		<table>
 
@@ -16,7 +20,7 @@
 				<th>Patient_Name</th>
 				<th>Species</th>
 				<th>Status</th>
-				<th>Options</th>
+				<th colspan="3">Options</th>
 			</tr>
 
 			<?php foreach ($patients as $patient) {  ?>
@@ -25,11 +29,27 @@
 			 	<td><?= $patient['species'];?></td>
 				<td><?= $patient['status'];?></td>
 				<td>
-					<a href="<?= URL ?>patient/edit/<?=$patient['patient_id']?>">Edit</a>
-					/
-					<a href="<?= URL ?>patient/delete/<?=$patient['patient_id']?>">Delete</a>
-					/
-					<a href="<?= URL ?>patient/read/<?=$patient['patient_id']?>">Info</a>
+					<a href="<?= URL ?>patient/edit/<?=$patient['patient_id']?>">
+						<button>
+							Edit
+						</button>
+					</a>
+				</td>
+
+				<td>
+					<a href="<?= URL ?>patient/delete/<?=$patient['patient_id']?>">
+						<button>
+							Delete
+						</button>
+					</a>
+				</td>
+
+				<td>	
+					<a href="<?= URL ?>patient/read/<?=$patient['patient_id']?>">
+						<button>
+							Info
+						</button>
+					</a>
 				</td>
 			</tr>
 			<?php } ?>
@@ -37,7 +57,23 @@
 	</article>
 
 	<aside>
+		<ul>
+			<li>
+				<a href="<?= URL ?>client/index">
+					<button id="BigButton">
+						Cliënt
+					</button>
+				</a>
+			</li>
 
+			<li>
+				<a href="<?= URL ?>specie/index">
+					<button id="BigButton">
+						Specie
+					</button>
+				</a>
+			</li>
+		</ul>
 	</aside>
 </div>
 
