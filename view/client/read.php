@@ -19,13 +19,11 @@
 				<tr>
 				<th>Cliënt_Firstname</th>
 				<th>Cliënt_Lastname</th>
-				<th>Cliënt_DateOfBirth</th>
 			</tr>
 
 			<tr>
 				<td><?= $client['client_firstname'];?></td>
 			 	<td><?= $client['client_lastname'];?></td>
-				<td><?= $client['client_DateOfBirth'];?></td>
 			</tr>
 		</table>		
 	</article>

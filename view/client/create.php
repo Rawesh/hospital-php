@@ -22,11 +22,7 @@
 			<br>
 			<label>CliëntLastname</label>
 			<br>
-			<input type="text" name="client_lastname" placeholder="cliënt_lastname"><br>
-			<label>DateOfBirth</label>
-			<br>
-			<input type="text" name="client_DateOfBirth" placeholder="client_DateOfBirth" 
-			maxlength="10">	
+			<input type="text" name="client_lastname" placeholder="cliënt_lastname"><br>	
 			<br>
 			<input type="submit" value="toevoegen">
 			</form>

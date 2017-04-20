@@ -17,16 +17,13 @@
 		<form action="<?=URL?>client/editSave" method="post">
 		<input type="hidden" name="client_id" value="<?=$client['client_id']?>">
 		<br>
-		<label>PatiëntName</label>
+		<label>Cliënt_Firstname</label>
 		<br>
 		<input type="text" name="client_firstname" value="<?=$client['client_firstname']?>" >
 		<br>
-		<label>Species</label>
+		<label>Cliënt_Lastname</label>
 		<br>
-		<input type="text" name="client_lastname" value="<?=$client['client_lastname']?>" ><br>
-		<label>Status</label>
-		<br>
-		<input type="text" name="client_DateOfBirth" value="<?=$client['client_DateOfBirth']?>" >	
+		<input type="text" name="client_lastname" value="<?=$client['client_lastname']?>" >	
 		<br>
 		<input type="submit" value="toevoegen">
 		</form>

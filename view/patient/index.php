@@ -15,19 +15,21 @@
 <hr>
 	<article>
 		<table>
-
 			<tr>
-				<th>Patient_Name</th>
-				<th>Species</th>
+				<th>Patient</th>
 				<th>Status</th>
+				<th>Species</th>
+				<th colspan="2">Client</th>
 				<th colspan="3">Options</th>
 			</tr>
 
 			<?php foreach ($patients as $patient) {  ?>
 			<tr>
 				<td><?= $patient['patient_name'];?></td>
-			 	<td><?= $patient['species'];?></td>
-				<td><?= $patient['status'];?></td>
+			 	<td><?= $patient['patient_status'];?></td>
+				<td><?= $patient['species_description'];?></td>
+				<td><?= $patient['client_firstname'];?></td>
+				<td><?= $patient['client_lastname'];?></td>
 				<td>
 					<a href="<?= URL ?>patient/edit/<?=$patient['patient_id']?>">
 						<button>
@@ -67,7 +69,7 @@
 			</li>
 
 			<li>
-				<a href="<?= URL ?>specie/index">
+				<a href="<?= URL ?>species/index">
 					<button id="BigButton">
 						Specie
 					</button>

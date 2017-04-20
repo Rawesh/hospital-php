@@ -4,7 +4,7 @@
 	<nav>
 		<ul>
 			<li>		
-				<a href="<?= URL ?>specie/create">
+				<a href="<?= URL ?>species/create">
 					<button id="NavButton">
 						addSpecie
 					</button>
@@ -23,10 +23,10 @@
 
 			<?php foreach ($species as $specie) {  ?>
 			<tr>
-				<td><?= $specie['specie'];?></td>
+				<td><?= $specie['species_description'];?></td>
 
 				<td>
-					<a href="<?= URL ?>specie/edit/<?=$specie['specie_id']?>">
+					<a href="<?= URL ?>species/edit/<?=$specie['species_id']?>">
 						<button>
 								Edit
 						</button>
@@ -34,7 +34,7 @@
 				</td>
 
 				<td>
-					<a href="<?= URL ?>specie/delete/<?=$specie['specie_id']?>">
+					<a href="<?= URL ?>species/delete/<?=$specie['species_id']?>">
 					 	<button>
 					 		Delete
 					 	</button>

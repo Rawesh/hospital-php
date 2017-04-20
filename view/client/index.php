@@ -19,7 +19,6 @@
 			<tr>
 				<th>cliënt_Firstname</th>
 				<th>cliënt_Lastname</th>
-				<th>DateOfBirth</th>
 				<th colspan="3">Options</th>
 			</tr>
 
@@ -27,7 +26,6 @@
 			<tr>
 				<td><?= $client['client_firstname'];?></td>
 			 	<td><?= $client['client_lastname'];?></td>
-				<td><?= $client['client_DateOfBirth'];?></td>
 				<td>
 					<a href="<?= URL ?>client/edit/<?=$client['client_id']?>">
 						<button>
@@ -67,7 +65,7 @@
 			</li>
 			
 			<li>
-				<a href="<?= URL ?>specie/index">
+				<a href="<?= URL ?>species/index">
 					<button id="BigButton">
 						Specie
 					</button>

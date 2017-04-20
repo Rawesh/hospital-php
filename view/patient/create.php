@@ -16,18 +16,42 @@
 	<article id="createArticle">
 
 			<form action="<?=URL?>patient/createSave" method="post">
-			<label>PatiëntName</label>
-			<br>
-			<input type="text" name="patient_name" placeholder="PatiëntName">
-			<br>
-			<label>Species</label>
-			<br>
-			<input type="text" name="species" placeholder="Species"><br>
-			<label>Status</label>
-			<br>
-			<input type="text" name="status" placeholder="Status">	
-			<br>
-			<input type="submit" value="toevoegen">
+				<label>Cliënt</label>
+				<br>
+
+				<select name="client">
+						<?php foreach ($clients as $client) { ?>
+							<option value="<?=$client['client_id'] ?>">
+
+								<?=$client['client_firstname'] ?>
+
+							</option>							
+						<?php } ?>
+				</select>
+
+				<br>
+				<label>PatiëntName</label>
+				<br>
+				<input type="text" name="patient_name" placeholder="PatiëntName">
+				<br>
+				<label>Species</label>
+				<br>
+					<select name="specie">
+						<?php foreach ($species as $specie) { ?>
+							<option value="<?=$specie['species_id'] ?>">
+
+								<?=$specie['species_description'] ?>
+
+							</option>							
+						<?php } ?>
+					</select>
+				
+				<br>
+				<label>Status</label>
+				<br>
+				<input type="text" name="status" placeholder="Status">	
+				<br>
+				<input type="submit" value="toevoegen">
 			</form>
 	</article>
 </div>

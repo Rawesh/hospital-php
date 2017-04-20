@@ -4,7 +4,7 @@
 	<nav id="createnav">
 		<ul>
 			<li>
-				<a href="<?= URL ?>specie/index">
+				<a href="<?= URL ?>species/index">
 					<button>
 						HomePage
 					</button>
@@ -15,10 +15,10 @@
 	</nav>
 	<article id="createArticle">
 
-			<form id="SpecieForm" action="<?=URL?>specie/createSave" method="post">
+			<form id="SpecieForm" action="<?=URL?>species/createSave" method="post">
 			<label>Specie</label>
 			<br>
-			<input type="text" name="specie" placeholder="Specie">
+			<input type="text" name="species" placeholder="Species">
 			<br>
 			<input type="submit" value="toevoegen">
 			</form>

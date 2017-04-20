@@ -24,8 +24,8 @@
 
 			<tr>
 				<td><?= $patient['patient_name'];?></td>
-			 	<td><?= $patient['species'];?></td>
-				<td><?= $patient['status'];?></td>
+			 	<td><?= $patient['species_description'];?></td>
+				<td><?= $patient['patient_status'];?></td>
 			</tr>
 		</table>		
 	</article>
