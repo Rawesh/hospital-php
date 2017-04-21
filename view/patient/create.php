@@ -49,7 +49,7 @@
 				<br>
 				<label>Status</label>
 				<br>
-				<input type="text" name="status" placeholder="Status">	
+				<textarea name="status" placeholder="Status"></textarea>	
 				<br>
 				<input type="submit" value="toevoegen">
 			</form>

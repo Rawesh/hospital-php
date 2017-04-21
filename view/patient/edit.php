@@ -23,21 +23,35 @@
 		<br>
 		<label>Status</label>
 		<br>
-		<input type="text" name="status" value="<?=$patient['patient_status']?>" >	
+		<textarea name="status"><?=$patient['patient_status']?></textarea>
 		<br>
 		<label>Species</label>
 		<br>
-		<input type="text" name="species" value="<?=$patient['species_description']?>">
+			<select name="specie">
+				<?php foreach ($species as $specie) { ?>
+					<option value="<?=$specie['species_id'] ?>">
+
+						<?=$specie['species_description'] ?>
+
+					</option>							
+				<?php } ?>
+			</select>
 		<br>
-		<label>Client_firstname</label>
+		<label>Cliënt</label>
 		<br>
-		<input type="text" name="client_firstname" value="<?=$patient['client_firstname']?>">
-		<br>
-		<label>Client_lastname</label>
-		<br>
-		<input type="text" name="client_lastname" value="<?=$patient['client_lastname']?>">
+		<select name="client">
+			<?php foreach ($clients as $client) { ?>
+				<option value="<?=$client['client_id'] ?>" <?php if ($client['client_id'] == $editclient['client_id']) { echo "selected"; } ?>>
+
+						<?= $client['client_firstname'] . $client['client_lastname']  ?>
+
+				</option>							
+			<?php } ?>
+		</select>
 		<br>		
 		<input type="submit" value="toevoegen">
 		</form>
 	</article>
 </div>
+
+

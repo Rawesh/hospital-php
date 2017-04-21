@@ -41,9 +41,11 @@ function delete($id)
 
 function edit($id)
 {
-	render("patient/edit", array('patient' => getPatient($id),
-								 'clients' => getClient($id)
-									));
+	render("patient/edit", array("clients" => getAllClients(),
+								 "species" => getAllSpecies(),
+								 "patient" => getPatient($id),
+								 "editclient" => getClient($id)
+								 ));
 }
 
 function editSave()
