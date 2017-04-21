@@ -43,8 +43,7 @@ function edit($id)
 {
 	render("patient/edit", array("clients" => getAllClients(),
 								 "species" => getAllSpecies(),
-								 "patient" => getPatient($id),
-								 "editclient" => getClient($id)
+								 "patient" => getPatient($id)
 								 ));
 }
 

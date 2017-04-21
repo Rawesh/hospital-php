@@ -23,7 +23,7 @@
 						<?php foreach ($clients as $client) { ?>
 							<option value="<?=$client['client_id'] ?>">
 
-								<?=$client['client_firstname'] ?>
+								<?=$client['client_firstname'] . $client['client_lastname'] ?>
 
 							</option>							
 						<?php } ?>

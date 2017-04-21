@@ -82,22 +82,18 @@ function editPatient()
 {
 	$db = openDatabaseConnection();
 
-	$sql = "UPDATE patients
-	set `patient_name` = :patient, `patient_status` = :status, `species_description` = :species,
-		 `client_firstname` = :client_firstname, `client_lastname` = :client_lastname 
-	WHERE patient_id = :patient_id";
+	$sql = "UPDATE patients SET `patient_name` = :patient, `patient_status` = :status, `species_id` = :species, `client_id` = :client_id WHERE patient_id = :patient_id";
 
 	$query = $db->prepare($sql);
 	$query->execute(array(
 		':patient' => $_POST["patient_name"],
-		':status' => $_POST["patient_status"],
-		':species' => $_POST["species_description"],
-		':client_firstname' => $_POST["client_firstname"],
-		':client_lastname' => $_POST["client_lastname"],
+		':status' => $_POST["status"],
+		':species' => $_POST["specie"],
+		':client_id' => $_POST["client"],
 		':patient_id' => $_POST["patient_id"]));
 
 	$db = null;
-
+	
 	return true;
 }
 

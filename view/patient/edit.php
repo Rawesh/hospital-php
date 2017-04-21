@@ -29,7 +29,7 @@
 		<br>
 			<select name="specie">
 				<?php foreach ($species as $specie) { ?>
-					<option value="<?=$specie['species_id'] ?>">
+					<option value="<?=$specie['species_id'] ?>" <?php if ($specie['species_id'] == $patient['species_id']) { echo "selected"; } ?>>
 
 						<?=$specie['species_description'] ?>
 
@@ -41,7 +41,7 @@
 		<br>
 		<select name="client">
 			<?php foreach ($clients as $client) { ?>
-				<option value="<?=$client['client_id'] ?>" <?php if ($client['client_id'] == $editclient['client_id']) { echo "selected"; } ?>>
+				<option value="<?=$client['client_id'] ?>" <?php if ($client['client_id'] == $patient['client_id']) { echo "selected"; } ?>>
 
 						<?= $client['client_firstname'] . $client['client_lastname']  ?>
 
